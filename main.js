@@ -4,13 +4,14 @@ var imgs = document.querySelectorAll(".content")
 var table_div = []
 var overview = document.querySelector(".overview")
 var img_overview = document.querySelector(".overview img")
+
 fetch("./data.json")
     .then((response)=> response.json())
     .then((json)=> appendImg(json) )
 
 
 function appendImg(arrayImg){
-     console.log(Math.floor(arrayImg.length/2))
+    date_fun(arrayImg)
     for(i=0; i < arrayImg.length - 1; i++){
         newImg = document.createElement("img")
         newP = document.createElement("p")
@@ -44,10 +45,10 @@ function table(div){
     table_div.push(div)
     
 }
-date = []
 function date_fun(table){
     date.push(table)
 }
+console.log(date)
 
 function clickfunct(id){
     img_overview.src = table_div[id].children[0].attributes[0].nodeValue
