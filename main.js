@@ -2,6 +2,7 @@ var gall1 = document.querySelector('.gallery-collumn-1')
 var gall2 = document.querySelector('.gallery-collumn-2')
 var imgs = document.querySelectorAll(".content")
 var table_div = []
+var date = []
 var overview = document.querySelector(".overview")
 var img_overview = document.querySelector(".overview img")
 
