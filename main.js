@@ -44,12 +44,15 @@ function table(div){
     table_div.push(div)
     
 }
-
+date = []
+function date_fun(table){
+    date.push(table)
+}
 
 function clickfunct(id){
     img_overview.src = table_div[id].children[0].attributes[0].nodeValue
     overview.style.display = 'flex'
-    document.querySelector(".overview p").textContent = arrayImg[id].date
+    document.querySelector(".overview p").textContent = date[0][id].date
     document.querySelector('body').style.overflowY = 'hidden'
 }
 var icon_close = document.querySelector('.icon-close')
